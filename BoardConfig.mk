@@ -165,8 +165,8 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     $(PLATFORM_PATH)/sepolicy
 
-# Snapdragon LLVM
-TARGET_USE_SDCLANG := true
+# SDClang
+include device/qcom/common/common.mk
 
 # Voltage
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
