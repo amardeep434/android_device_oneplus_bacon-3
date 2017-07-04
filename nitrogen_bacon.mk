@@ -24,7 +24,7 @@ $(call inherit-product, device/oneplus/bacon/bacon.mk)
 # Inherit some common Nitrogen OS stuff.
 $(call inherit-product, vendor/nitrogen/products/common.mk)
 
-PRODUCT_NAME := lineage_bacon
+PRODUCT_NAME := nitrogen_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := A0001
