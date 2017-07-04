@@ -12,19 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/oneplus/bacon/apns-full-conf.xml:system/etc/apns-conf.xml
+
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from bacon device
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Nitrogen OS stuff.
+$(call inherit-product, vendor/nitrogen/products/common.mk)
 
 PRODUCT_NAME := lineage_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := A0001
+
+PRODUCT_PACKAGES += \
+    Launcher3 \
+    Snap
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
